@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K　ポートフォリオ</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+
+    <div id="homeH1">
+        <h1>K　ポートフォリオ</h1>
+    </div>
+
+    <!-- 固定背景  -->
+    <div id="mainVisual">
+        <!-- <p><img src="../illust/ill_toppage.jpg" alt=""></p>
+            背景はCSSで挿入 -->
+
+
+        <!-- 可動スクロールサムネイル -->
+        <div class="space">
+        </div>
+
+        <div id="scrollContent">
+            <div id="thumbnail">
+                <h3>See My Works</h3>
+                <div id="thumIMG">
+                    <p><a href="illust.html"><img src="../illust/ill_02.jpg" alt="">Illust</a></p>
+                    <p><a href="banner.html"><img src="../banner/banner_06.jpg" alt="">Banner</a></p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 右固定メニュー -->
+        <button id="menuBtn" class="menu-toggle"></button>
+
+        <div id="nav">
+            <div id="navMenu">
+                <h2><a href="index.html">HOME</a></h2>
+                <h2>WORKS</h2>
+                <p><a href="illust.html">Illustrations</a></p><!-- ここのP消しちゃだめかな？ -->
+                <p><a href="banner.html">Banner</a></p>
+                <h2><a href="mailto:yonetani.hitomi.web@gmail.com">CONTACT ME</a></h2>
+            </div>
+        </div>
+
+        <!-- 固定フッター -->
+        <div id="footer">
+            <p>&copy;K</p>
+            <p>無断転載禁止　AI学習禁止</p>
+            <p>DO NOT REUPLOAD MY WORKS, DO NOT USE MY WORKS FOR AI TRAINING</p>
+        </div>
+    </div><!-- 固定背景divとじ  -->
+
+    <!-- MEDIA QUERYメニュー開閉用  -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const nav = document.getElementById('nav');
+
+        menuBtn.addEventListener('click', function () {
+            nav.classList.toggle('open');
+            menuBtn.classList.toggle('open');
+        });
+
+        // メニュー外をタップしたら閉じる
+        nav.addEventListener('click', function (e) {
+            if (e.target === this) {
+                nav.classList.remove('open');
+                menuBtn.classList.remove('open');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
