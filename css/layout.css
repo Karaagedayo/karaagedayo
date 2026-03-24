@@ -81,7 +81,7 @@ div#mainVisual {
     /*position: fixed;*/
     top: 0px;
     left: 0px;
-    background-image: url(../../illust/ill_toppage.jpg);
+    background-image: url(../illust/ill_toppage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -363,13 +363,13 @@ div#footer p {
 
     button#menuBtn.menu-toggle {
         /*メニューアイコン：閉じている時*/
-        background-image: url(../../icon/icon_menuopen.png);
+        background-image: url(../icon/icon_menuopen.png);
 
     }
 
     button#menuBtn.menu-toggle.open {
         /*メニューアイコン：開いている時*/
-        background-image: url(../../icon/icon_menuclose.png);
+        background-image: url(../icon/icon_menuclose.png);
     }
 
     /*---------- MENU END ----------
