@@ -1,0 +1,365 @@
+@charset "UTF-8";
+
+/*========== NOTE
+
+    last updated: 2026.03.02
+
+    +1 : ELEMENTS
+    +2 : MAIN AREA
+    +3 : MENU AREA
+    +4 : WORKS GALLARY AREA
+    +5 : FOOTER AREA
+    +6 : MEDIA QUERY (MAX-WIDTH: 767PX)
+
+==========*/
+
+/*========================
++1 : ELEMENTS START
+========================*/
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    font-size: 16px;
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: "Cormorant", serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: "Cormorant", serif;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: "Cormorant", serif;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: "Cormorant", serif;
+    line-height: 1.5;
+}
+
+
+/*========================
++1 : ELEMENTS END
+========================*/
+
+/*========================
++2 : MAIN AREA
+========================*/
+
+div#homeH1 h1 {
+    display: none;
+}
+
+/*----------MAIN VISUAL----------*/
+
+div#space {
+    height: 70vh;
+}
+
+div#mainVisual {
+    z-index: 1;
+    width: 100%;
+    height: 200vh;
+    top: 0px;
+    left: 0px;
+    background-image: url(../illust/ill_toppage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*----------THUMBNAIL START----------*/
+
+
+div#scrollContent {
+    background-color: transparent;
+    z-index: 90;
+    padding-top: 20vh;
+    margin-right: 256px;
+    /* メニューバー分の余白 */
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+div#scrollContent div#thumbnail {
+    min-width: 400px;
+    width: 70%;
+    margin-inline: auto;
+    backdrop-filter: blur(4px);
+}
+
+div#scrollContent div#thumbnail h3 {
+    background-color: rgb(33, 74, 104, 0.6);
+    color: white;
+    border: 2px solid #214a68;
+    text-align: center;
+    height: 48px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div#scrollContent div#thumbnail div#thumIMG {
+    background-color: rgb(255, 255, 255, 0.6);
+    border-left: 2px solid #214a68;
+    border-bottom: 2px solid #214a68;
+    border-right: 2px solid #214a68;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+div#scrollContent div#thumbnail div#thumIMG a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: #214a68;
+}
+
+div#scrollContent div#thumbnail div#thumIMG img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+}
+
+/*========================
++3 : MENU AREA
+========================*/
+
+div#nav {
+    z-index: 100;
+    background-color: rgb(255, 255, 255, 0.6);
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+    width: 256px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding-top: 40px;
+    backdrop-filter: blur(4px);
+}
+
+div#nav div#navMenu {
+    background-color: rgb(157, 254, 254);
+    /**/
+    margin-right: 24px;
+}
+
+div#navMenu h2 {
+    background-color: rgb(232, 208, 255);
+    /**/
+    color: #214a68;
+    text-align: right;
+    padding: 16px 0px;
+}
+
+div#navMenu p {
+    background-color: rgb(232, 208, 255);
+    /**/
+    text-decoration: none;
+    color: #214a68;
+    text-align: right;
+}
+
+div#navMenu a {
+    background-color: rgb(232, 208, 255);
+    /**/
+    text-decoration: none;
+    color: #214a68;
+    text-align: right;
+}
+
+
+/*========================
++4 : WORKS GALLARY AREA
+========================*/
+
+div#work {
+    background-color: #bde8e2;
+    padding: 16px 256px 50vh 40px;
+}
+
+div#worksTitle h1 {
+    color: #214a68;
+    font-size: 3rem;
+    position: fixed;
+    top: 16px;
+    left: 40px;
+}
+
+/*---------- GALLARY ----------*/
+
+div#gallary {
+    background-color: rgb(255, 206, 206);
+    /**/
+    padding-top: 120px;
+    padding-right: 40px;
+    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 40px;
+}
+
+div#gallary a {
+    text-decoration: none;
+    color: #214a68;
+}
+
+div#gallary img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+/*========================
++5 : FOOTER AREA
+========================*/
+
+div#footer {
+    z-index: 10;
+    background-color: rgb(154, 252, 219);
+    /**/
+    width: 100%;
+    height: 120px;
+    padding: 16px 24px;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+div#footer p {
+    background-color: rgb(195, 195, 255);
+    /**/
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/*========================
++6 : MEDIA QUERY (MAX-WIDTH: 767PX)
+========================*/
+@media screen and (max-width: 767px) {
+
+    /*---------- THUMBNAIL ----------
+    -------------------------------*/
+
+    div#scrollContent {
+        margin-right: 0px;
+        /* メニューバー分の余白 */
+    }
+
+    div#scrollContent div#thumbnail {
+        width: 400px;
+    }
+
+    div#scrollContent div#thumbnail div#thumIMG a {
+        font-size: 2rem;
+    }
+
+    div#scrollContent div#thumbnail div#thumIMG img {
+        width: 256px;
+        height: 256px;
+        object-fit: cover;
+    }
+
+
+    /*---------- GALLARY ----------
+    -----------------------------*/
+
+    div#work {
+        padding: 16px 64px 50vh 64px;
+    }
+
+    div#worksTitle h1 {
+        font-size: 3.5rem;
+    }
+
+    div#gallary {
+        padding-right: 0px;
+        padding-bottom: 0px;
+        grid-template-columns: repeat(auto-fill, 240px);
+        gap: 40px;
+    }
+
+    div#gallary img {
+        width: 240px;
+        height: 240px;
+    }
+
+    /*---------- MENU ----------
+    --------------------------*/
+    div#navMenu h2 {
+        font-size: 3rem;
+    }
+
+    div#navMenu p {
+        font-size: 2.25rem;
+    }
+
+    button#menuBtn.menu-toggle {
+        z-index: 110;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        border: none;
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all 1s ease;
+    }
+
+    div#nav {
+        width: 70%;
+        padding-top: 60px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    div#nav.open {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.5s ease;
+    }
+
+    button#menuBtn.menu-toggle {
+        /*メニューアイコン：閉じている時*/
+        background-image: url(../icon/icon_menuopen.png);
+
+    }
+
+    button#menuBtn.menu-toggle.open {
+        /*メニューアイコン：開いている時*/
+        background-image: url(../icon/icon_menuclose.png);
+    }
+
+    /*---------- MENU END ----------
+    ------------------------------*/
+
+}
