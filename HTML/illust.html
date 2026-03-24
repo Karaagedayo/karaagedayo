@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustrations　|　K</title>
+    <link rel="stylesheet" href="css/style.css" style="text/css">
+</head>
+
+<body>
+    <div id="work">
+
+        <!-- WORKS タイトル -->
+        <div id="worksTitle">
+            <h1>Illustrations</h1>
+        </div>
+
+        <!-- サムネ一覧 -->
+        <div id="gallary">
+            <a href="../illust/ill_01.jpg">
+                <img src="../illust/ill_01.jpg" alt="画像１"></a>
+            <a href="../illust/ill_02.jpg">
+                <img src="../illust/ill_02.jpg" alt="画像２"></a>
+            <a href="../illust/ill_03.jpg">
+                <img src="../illust/ill_03.jpg" alt="画像３"></a>
+            <a href="../illust/ill_04.jpg">
+                <img src="../illust/ill_04.jpg" alt="画像４"></a>
+            <a href="../illust/ill_05.jpg">
+                <img src="../illust/ill_05.jpg" alt="画像５"></a>
+                <a href="../illust/ill_06.jpg">
+                <img src="../illust/ill_06.jpg" alt="画像６"></a>
+            <a href="../illust/ill_07.jpg">
+                <img src="../illust/ill_07.jpg" alt="画像７"></a>
+            <a href="../illust/ill_08.jpg">
+                <img src="../illust/ill_08.jpg" alt="画像８"></a>
+        </div>
+
+        <!-- コピペ用テンプレート
+<a href="../illust/ill_**.jpg">
+                <img src="../illust/ill_**.jpg" alt=""></a>        
+        -->
+
+        <!-- 右固定メニュー -->
+        <button id="menuBtn" class="menu-toggle"></button>
+
+        <div id="nav">
+            <div id="navMenu">
+                <h2><a href="index.html">HOME</a></h2>
+                <h2>WORKS</h2>
+                <p><a href="illust.html">Illustrations</a></p><!-- ここのP消しちゃだめかな？ -->
+                <p><a href="banner.html">Banner</a></p>
+                <h2><a href="mailto:yonetani.hitomi.web@gmail.com">CONTACT ME</a></h2>
+            </div>
+        </div>
+
+        <!-- 固定フッター -->
+        <div id="footer">
+            <p>&copy;K</p>
+            <p>無断転載禁止　AI学習禁止</p>
+            <p>DO NOT REUPLOAD MY WORKS, DO NOT USE MY WORKS FOR AI TRAINING</p>
+        </div>
+    </div>
+
+    <!-- MEDIA QUERYメニュー開閉用  -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const nav = document.getElementById('nav');
+
+        menuBtn.addEventListener('click', function () {
+            nav.classList.toggle('open');
+            menuBtn.classList.toggle('open');
+        });
+
+        // メニュー外をタップしたら閉じる
+        nav.addEventListener('click', function (e) {
+            if (e.target === this) {
+                nav.classList.remove('open');
+                menuBtn.classList.remove('open');
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
