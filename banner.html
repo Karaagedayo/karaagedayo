@@ -21,8 +21,7 @@
             <a href="banner/banner_01.jpg">
                 <img src="banner/banner_01.jpg" alt=""></a>
             <a href="banner/banner_02.jpg">
-                <img src="banner/banner_02.jpg" alt="">
-            </a>
+                <img src="banner/banner_02.jpg" alt=""></a>
             <a href="banner/banner_03.jpg">
                 <img src="banner/banner_03.jpg" alt=""></a>
             <a href="banner/banner_04.jpg">
@@ -41,14 +40,12 @@
 
         <!-- コピペ用テンプレート
             <a href="banner/banner_**.jpg">
-                <img src="banner/banner_**.jpg" alt="">
-            
-            </a>        
+                <img src="banner/banner_**.jpg" alt=""></a>        
         -->
 
         <!-- 右固定メニュー -->
         <button id="menuBtn" class="menu-toggle"></button>
-        
+
         <div id="nav">
             <div id="navMenu">
                 <h2><a href="index.html">HOME</a></h2>
@@ -67,7 +64,49 @@
         </div>
     </div>
 
-        <!-- MEDIA QUERYメニュー開閉用  -->
+    <!---------- モーダル用  ---------->
+    <div id="modal" class="modal">
+        <span id="modalClose" class="modal-close"></span>
+        <img id="modalImage" class="modal-image" src="" alt="">
+
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.getElementById('modalClose');
+
+        // すべてのギャラリー画像にクリックイベントを付ける
+        document.querySelectorAll('#gallary a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();                    // リンクのデフォルト動作を止める
+                const imgSrc = this.getAttribute('href'); // 拡大したい画像のURL
+                modalImage.src = imgSrc;
+                modal.classList.add('show');
+            });
+        });
+
+        // 閉じる処理
+        modalClose.addEventListener('click', function () {
+            modal.classList.remove('show');
+        });
+
+        // 背景をクリックして閉じる
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+
+        // ESCキーで閉じる
+        document.addEventListener('keydown', function (e) {
+            if (e.key === "Escape" && modal.classList.contains('show')) {
+                modal.classList.remove('show');
+            }
+        });
+    </script>
+
+    <!-- MEDIA QUERYメニュー開閉用  -->
     <script>
         const menuBtn = document.getElementById('menuBtn');
         const nav = document.getElementById('nav');

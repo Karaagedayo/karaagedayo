@@ -28,7 +28,7 @@
                 <img src="illust/ill_04.jpg" alt="画像４"></a>
             <a href="illust/ill_05.jpg">
                 <img src="illust/ill_05.jpg" alt="画像５"></a>
-                <a href="illust/ill_06.jpg">
+            <a href="illust/ill_06.jpg">
                 <img src="illust/ill_06.jpg" alt="画像６"></a>
             <a href="illust/ill_07.jpg">
                 <img src="illust/ill_07.jpg" alt="画像７"></a>
@@ -61,6 +61,50 @@
             <p>DO NOT REUPLOAD MY WORKS, DO NOT USE MY WORKS FOR AI TRAINING</p>
         </div>
     </div>
+
+
+    <!---------- モーダル用  ---------->
+    <div id="modal" class="modal">
+        <span id="modalClose" class="modal-close"></span>
+        <img id="modalImage" class="modal-image" src="" alt="">
+
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.getElementById('modalClose');
+
+        // すべてのギャラリー画像にクリックイベントを付ける
+        document.querySelectorAll('#gallary a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();                    // リンクのデフォルト動作を止める
+                const imgSrc = this.getAttribute('href'); // 拡大したい画像のURL
+                modalImage.src = imgSrc;
+                modal.classList.add('show');
+            });
+        });
+
+        // 閉じる処理
+        modalClose.addEventListener('click', function () {
+            modal.classList.remove('show');
+        });
+
+        // 背景をクリックして閉じる
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+
+        // ESCキーで閉じる
+        document.addEventListener('keydown', function (e) {
+            if (e.key === "Escape" && modal.classList.contains('show')) {
+                modal.classList.remove('show');
+            }
+        });
+    </script>
+
 
     <!-- MEDIA QUERYメニュー開閉用  -->
     <script>
