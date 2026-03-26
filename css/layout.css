@@ -213,11 +213,9 @@ div#worksTitle h1 {
 div#gallary {
     background-color: rgb(255, 206, 206);
     /**/
-    /*padding-top: 40px;*/
-    padding-left: 40px;
-    padding-bottom: 80px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
     gap: 40px;
 }
 
@@ -276,6 +274,7 @@ span.modal-close {
 
 div#footer {
     z-index: 10;
+    /*background-color: #214a68;*/
     background-color: rgb(154, 252, 219);
     /**/
     width: 100%;
@@ -317,7 +316,7 @@ div#footer p {
     }
 
     div#scrollContent div#thumbnail {
-        max-width: 80%;
+        max-width: 320px;
     }
 
     div#scrollContent div#thumbnail div#thumIMG a {
@@ -325,27 +324,26 @@ div#footer p {
     }
 
     div#scrollContent div#thumbnail div#thumIMG img {
-        width: 240px;
-        height: 240px;
-        object-fit: cover;
+        width: 200px;
+        height: 200px;
     }
 
     /*---------- GALLARY ----------
     -----------------------------*/
-    div#worksTitle h1 {
-        font-size: 3rem;
-        left: 64px;
-    }
 
     div#work {
-        padding: 16px 64px 50vh 64px;
+        padding: 0px 16px 50vh 16px;
+    }
+
+    div#worksTitle h1 {
+        font-size: 3rem;
     }
 
     div#gallary {
         padding-right: 0px;
         padding-bottom: 0px;
         grid-template-columns: repeat(auto-fill, 180px);
-        gap: 40px;
+        gap: 24px;
     }
 
     div#gallary img {
