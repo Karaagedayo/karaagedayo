@@ -301,10 +301,10 @@ div#footer p {
 @media screen and (max-width: 767px) {
 
     div#homeH1 h1 {
-        font-size: 3rem;
+        font-size: 1.5rem;
         position: fixed;
-        top: 0px;
-        left: 24px;
+        top: 24px;
+        left: 36px;
     }
 
     /*---------- THUMBNAIL ----------
@@ -317,6 +317,11 @@ div#footer p {
 
     div#scrollContent div#thumbnail {
         max-width: 320px;
+    }
+
+    div#scrollContent div#thumbnail h3{
+        font-size: 1.5rem;
+        padding-top: 8px;
     }
 
     div#scrollContent div#thumbnail div#thumIMG a {
