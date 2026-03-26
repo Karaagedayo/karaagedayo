@@ -204,7 +204,7 @@ div#work {
 
 div#worksTitle h1 {
     color: #214a68;
-    font-size: 3rem;
+    font-size: 4rem;
     padding-left: 40px;
 }
 
@@ -292,6 +292,7 @@ div#footer p {
     color: white;
     font-size: 1rem;
     line-height: 1.5;
+    text-align: right;
 }
 
 /*========================
@@ -301,9 +302,7 @@ div#footer p {
 @media screen and (max-width: 767px) {
 
     div#homeH1 h1 {
-        color: #214a68;
-        font-size: 4rem;
-        background-color: transparent;
+        font-size: 3rem;
         position: fixed;
         top: 0px;
         left: 24px;
@@ -318,7 +317,7 @@ div#footer p {
     }
 
     div#scrollContent div#thumbnail {
-        width: 360px;
+        max-width: 80%;
     }
 
     div#scrollContent div#thumbnail div#thumIMG a {
@@ -333,13 +332,13 @@ div#footer p {
 
     /*---------- GALLARY ----------
     -----------------------------*/
+    div#worksTitle h1 {
+        font-size: 3rem;
+        left: 64px;
+    }
 
     div#work {
         padding: 16px 64px 50vh 64px;
-    }
-
-    div#worksTitle h1 {
-        left: 64px;
     }
 
     div#gallary {
@@ -358,7 +357,7 @@ div#footer p {
     --------------------------*/
 
     div#navMenu h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     div#navMenu p {
@@ -378,7 +377,7 @@ div#footer p {
         width: 40px;
         height: 40px;
         cursor: pointer;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
     }
 
     div#nav {
@@ -405,7 +404,9 @@ div#footer p {
         background-image: url(../icon/icon_menuclose.png);
     }
 
-    /*---------- MENU END ----------
+    /*---------- FOOTER ----------
     ------------------------------*/
-
+    div#footer p {
+        text-align: left;
+    }
 }
